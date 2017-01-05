@@ -30,7 +30,7 @@ func Query(c echo.Context) error {
 			rows.Scan(&fruit.Name, &fruit.Code)
 			fruits = append(fruits, fruit)
 		}
-		fmt.Println(fruits)
+		fmt.Printf("%+v", fruits)
 		return c.JSON(http.StatusOK, fruits)
 	}
 
